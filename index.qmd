@@ -1,0 +1,10 @@
+---
+title: "RunWithAI"
+about:
+  template: jolla
+  image: images/jaylon.jpg
+---
+
+
+Hi, I’m Jaylon from China. After working as a software developer for more than three decades, I decided to return to school at UBC. I’m here to learn modern tools and techniques so I can help clients unlock real value and actionable insights from their data.
+
