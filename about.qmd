@@ -2,14 +2,14 @@
 title: "About Me"
 ---
 
-##Background##
+## Background
 
 After graduating with a Master’s in Electrical Engineering in 2000, I spent over two decades working as a versatile software engineer. My experience spans full-stack development—from mobile apps and desktop software to robust server-side architecture. Recently, my projects have centered on e-commerce platforms, industrial device management, and data-driven analysis.
 
-##Why data scienc##
+## Why data scienc
 
 I chose the UBC MDS program to master modern data science technologies and turn complex data into actionable insights.
 
-##Outside of data science##
+## Outside of data science
 
 Coffee

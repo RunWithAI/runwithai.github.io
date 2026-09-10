@@ -25,6 +25,27 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "##Background##\nAfter graduating with a Master’s in Electrical Engineering in 2000, I spent over two decades working as a versatile software engineer. My experience spans full-stack development—from mobile apps and desktop software to robust server-side architecture. Recently, my projects have centered on e-commerce platforms, industrial device management, and data-driven analysis.\n##Why data scienc##\nI chose the UBC MDS program to master modern data science technologies and turn complex data into actionable insights.\n##Outside of data science##\nCoffee"
+    "text": "After graduating with a Master’s in Electrical Engineering in 2000, I spent over two decades working as a versatile software engineer. My experience spans full-stack development—from mobile apps and desktop software to robust server-side architecture. Recently, my projects have centered on e-commerce platforms, industrial device management, and data-driven analysis."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "",
+    "text": "After graduating with a Master’s in Electrical Engineering in 2000, I spent over two decades working as a versatile software engineer. My experience spans full-stack development—from mobile apps and desktop software to robust server-side architecture. Recently, my projects have centered on e-commerce platforms, industrial device management, and data-driven analysis."
+  },
+  {
+    "objectID": "about.html#why-data-scienc",
+    "href": "about.html#why-data-scienc",
+    "title": "About Me",
+    "section": "Why data scienc",
+    "text": "Why data scienc\nI chose the UBC MDS program to master modern data science technologies and turn complex data into actionable insights."
+  },
+  {
+    "objectID": "about.html#outside-of-data-science",
+    "href": "about.html#outside-of-data-science",
+    "title": "About Me",
+    "section": "Outside of data science",
+    "text": "Outside of data science\nCoffee"
   }
 ]
