@@ -4,4 +4,5 @@ author: "RunWithAI"
 date: 2026-09-09
 ---
 
-To be added
+It was like a nightmare.  
+[Monday](monday.qmd)
