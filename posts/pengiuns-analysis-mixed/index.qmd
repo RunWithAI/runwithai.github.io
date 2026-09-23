@@ -1,0 +1,44 @@
+---
+title: "Rython and R code integration"
+author: "RunWithAI"
+date: 2026-09-22
+engine: knitr
+execute:
+  message: false
+format: html
+---
+
+We use the dataset from  [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) to test how to embed python code and output into html page via Quarto.
+
+First step, we load the pengiuin data set and check what it has. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#| message: false
+
+library(reticulate)
+py_config()
+library(tidyverse)
+library(palmerpenguins)
+
+head(penguins)
+```
+
+now let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island. 
+
+```{python}
+from IPython.display import display
+# use penguins from R context
+penguins = r.penguins
+display(penguins.describe())
+print("\n")
+display(penguins.head())
+
+pats = penguins.query("species == 'Adelie' and island == 'Torgersen'" )
+bill_length_mean = pats['bill_length_mm'].mean()
+```
+
+The average bill length of Adelie pengiuns on Torgersen is `{r} round(py$bill_length_mean, 1)` mm.

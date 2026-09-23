@@ -1,9 +1,0 @@
----
-title: "Monday in the first week"
-author: "RunWithAI"
-date: 2026-09-10
----
-
-## what to say?
-
-nothing at all

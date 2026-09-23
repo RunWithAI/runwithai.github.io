@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Tuesday in the first week\n\n\n\n\n\n\n\n\nSep 10, 2026\n\n\nRunWithAI\n\n\n\n\n\n\n\n\n\n\n\n\nMonday in the first week\n\n\n\n\n\n\n\n\nSep 10, 2026\n\n\nRunWithAI\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nRunWithAI\n\n\n\n\n\nNo matching items"
+    "text": "Rython and R code integration\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nRunWithAI\n\n\n\n\n\n\n\n\n\n\n\n\nPython code integration\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nRunWithAI\n\n\n\n\n\n\n\n\n\n\n\n\nR code integration\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nRunWithAI\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nRunWithAI\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,11 +14,11 @@
     "text": "Hi, I’m Jaylon from China. After working as a software developer for more than three decades, I decided to return to school at UBC. I’m here to learn modern tools and techniques so I can help clients unlock real value and actionable insights from their data."
   },
   {
-    "objectID": "posts/first-weeks/tuesday.html",
-    "href": "posts/first-weeks/tuesday.html",
-    "title": "Tuesday in the first week",
+    "objectID": "posts/pengiuns-analysis-python/index.html",
+    "href": "posts/pengiuns-analysis-python/index.html",
+    "title": "Python code integration",
     "section": "",
-    "text": "About Me"
+    "text": "We use the dataset from Palmer Penguins to test how to embed python code and output into html page via Quarto.\nFirst step, we load the pengiuin data set and check what it has.\n\nfrom palmerpenguins import load_penguins\nfrom IPython.display import display\npenguins = load_penguins()\ndisplay(penguins.describe())\nprint(\"\\n\")\ndisplay(penguins.head())\n\n\n\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nyear\n\n\n\n\ncount\n342.000000\n342.000000\n342.000000\n342.000000\n344.000000\n\n\nmean\n43.921930\n17.151170\n200.915205\n4201.754386\n2008.029070\n\n\nstd\n5.459584\n1.974793\n14.061714\n801.954536\n0.818356\n\n\nmin\n32.100000\n13.100000\n172.000000\n2700.000000\n2007.000000\n\n\n25%\n39.225000\n15.600000\n190.000000\n3550.000000\n2007.000000\n\n\n50%\n44.450000\n17.300000\n197.000000\n4050.000000\n2008.000000\n\n\n75%\n48.500000\n18.700000\n213.000000\n4750.000000\n2009.000000\n\n\nmax\n59.600000\n21.500000\n231.000000\n6300.000000\n2009.000000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n\n\n\n\n\ncalculate the average bill length (mm) of Adelie pengiuns on Torgersen island.\n\npats = penguins.query(\"species == 'Adelie' and island == 'Torgersen'\" )\nbill_length_mean = pats['bill_length_mm'].mean()\n\nThe average bill length of Adelie pengiuns on Torgersen is 39 mm.\nDataset Source:\npalmerpenguins dataset(CC0 1.0) AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. https://allisonhorst.github.io/palmerpenguins/"
   },
   {
     "objectID": "posts/first-weeks/index.html",
@@ -28,18 +28,18 @@
     "text": "It was like a nightmare.\nMonday"
   },
   {
-    "objectID": "posts/first-weeks/monday.html",
-    "href": "posts/first-weeks/monday.html",
-    "title": "Monday in the first week",
+    "objectID": "posts/pengiuns-analysis-mixed/index.html",
+    "href": "posts/pengiuns-analysis-mixed/index.html",
+    "title": "Rython and R code integration",
     "section": "",
-    "text": "nothing at all"
+    "text": "We use the dataset from Palmer Penguins to test how to embed python code and output into html page via Quarto.\nFirst step, we load the pengiuin data set and check what it has.\n\nlibrary(reticulate)\npy_config()\n\npython:         /Users/whatsthat/Workspace/MDS/runwithai.github.io/.venv/bin/python\nlibpython:      /Users/whatsthat/.local/share/uv/python/cpython-3.14.7-macos-x86_64-none/lib/libpython3.14.dylib\npythonhome:     /Users/whatsthat/Workspace/MDS/runwithai.github.io/.venv:/Users/whatsthat/Workspace/MDS/runwithai.github.io/.venv\nvirtualenv:     /Users/whatsthat/Workspace/MDS/runwithai.github.io/.venv/bin/activate_this.py\nversion:        3.14.7 (main, Aug 25 2026, 13:50:42) [Clang 22.1.3 ]\nnumpy:          /Users/whatsthat/Workspace/MDS/runwithai.github.io/.venv/lib/python3.14/site-packages/numpy\nnumpy_version:  2.5.3\n\nNOTE: Python version was forced by VIRTUAL_ENV\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nnow let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island.\n\nfrom IPython.display import display\n# use penguins from R context\npenguins = r.penguins\ndisplay(penguins.describe())\n\n       bill_length_mm  bill_depth_mm  ...   body_mass_g         year\ncount      342.000000     342.000000  ...  3.440000e+02   344.000000\nmean        43.921930      17.151170  ... -1.248119e+07  2008.029070\nstd          5.459584       1.974793  ...  1.635055e+08     0.818356\nmin         32.100000      13.100000  ... -2.147484e+09  2007.000000\n25%         39.225000      15.600000  ...  3.550000e+03  2007.000000\n50%         44.450000      17.300000  ...  4.025000e+03  2008.000000\n75%         48.500000      18.700000  ...  4.750000e+03  2009.000000\nmax         59.600000      21.500000  ...  6.300000e+03  2009.000000\n\n[8 rows x 5 columns]\n\nprint(\"\\n\")\ndisplay(penguins.head())\n\n  species     island  bill_length_mm  ...  body_mass_g     sex  year\n0  Adelie  Torgersen            39.1  ...         3750    male  2007\n1  Adelie  Torgersen            39.5  ...         3800  female  2007\n2  Adelie  Torgersen            40.3  ...         3250  female  2007\n3  Adelie  Torgersen             NaN  ...  -2147483648     NaN  2007\n4  Adelie  Torgersen            36.7  ...         3450  female  2007\n\n[5 rows x 8 columns]\n\n\npats = penguins.query(\"species == 'Adelie' and island == 'Torgersen'\" )\nbill_length_mean = pats['bill_length_mm'].mean()\n\nThe average bill length of Adelie pengiuns on Torgersen is 39 mm."
   },
   {
-    "objectID": "posts/first-weeks/monday.html#what-to-say",
-    "href": "posts/first-weeks/monday.html#what-to-say",
-    "title": "Monday in the first week",
+    "objectID": "posts/pengiuns-analysis-r/index.html",
+    "href": "posts/pengiuns-analysis-r/index.html",
+    "title": "R code integration",
     "section": "",
-    "text": "nothing at all"
+    "text": "We use the dataset from Palmer Penguins to test how to embed python code and output into html page via Quarto.\nFirst step, we load the pengiuin data set and check what it has.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nnow let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island.\n\npgs &lt;- penguins |&gt; filter(species == 'Adelie' & island == 'Torgersen') |&gt;\n    select(\"bill_length_mm\") |&gt;\n    map_dbl(mean, na.rm = TRUE)\n\nThe average bill length of Adelie pengiuns on Torgersen is 39 mm."
   },
   {
     "objectID": "about.html",
