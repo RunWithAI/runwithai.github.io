@@ -1,13 +1,15 @@
 ---
 title: "Python code integration"
 author: "RunWithAI"
-date: 2026-09-22
+date: 2026-09-24
 engine: jupyter
 format: html
 ---
 
 
 # Using Python in Web Pages
+
+This page was created following the guidelines from [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html). 
 
 ## Dataset
 

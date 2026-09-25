@@ -21,7 +21,10 @@ Follow the steps below to set up the environment and render the website locally.
 ### 0. Clone the Repository
 ```bash
 git clone https://github.com/RunWithAI/runwithai.github.io.git
+cd runwithai.github.io
 ```
+
+> **Note:** Unless otherwise specified, all subsequent terminal commands must be executed from the **root directory** of this cloned repository.  
 
 ### 1. Prerequisites
 Ensure you have the following installed on your machine:
@@ -36,7 +39,6 @@ Ensure you have the following installed on your machine:
 Install the locked dependencies into the virtual environment using uv:
 
 ```bash
-cd runwithai.github.io
 uv sync
 ``` 
 

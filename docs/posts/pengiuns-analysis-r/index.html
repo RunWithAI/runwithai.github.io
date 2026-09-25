@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RunWithAI">
-<meta name="dcterms.date" content="2026-09-22">
+<meta name="dcterms.date" content="2026-09-24">
 
 <title>R code integration – RunWithAI</title>
 <style>
@@ -155,8 +155,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-r-in-web-pages" id="toc-using-r-in-web-pages" class="nav-link active" data-scroll-target="#using-r-in-web-pages">Using R in Web Pages</a>
+  <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#r-code" id="toc-r-code" class="nav-link" data-scroll-target="#r-code">R code</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -180,7 +191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 22, 2026</p>
+      <p class="date">September 24, 2026</p>
     </div>
   </div>
   
@@ -192,8 +203,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>We use the dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> to test how to embed python code and output into html page via Quarto.</p>
-<p>First step, we load the pengiuin data set and check what it has.</p>
+<section id="using-r-in-web-pages" class="level1">
+<h1>Using R in Web Pages</h1>
+<p>This page was created following the guidelines from <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html">UBC MDS DSCI 521 milestone3</a> . The dataset is loaded via library palmerpenguins.</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>We use the <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> dataset to demonstrate how to embed R code and its output into an HTML page via Quarto.</p>
+</section>
+<section id="r-code" class="level2">
+<h2 class="anchored" data-anchor-id="r-code">R code</h2>
+<p>First, we load the penguin dataset and inspect its contents.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
@@ -212,15 +231,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 # ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
 </div>
 </div>
-<p>now let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island.</p>
+<p>Now, let’s find the average bill length (mm) of Adelie penguins on Torgersen Island.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pgs <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">'Adelie'</span> <span class="sc">&amp;</span> island <span class="sc">==</span> <span class="st">'Torgersen'</span>) <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="st">"bill_length_mm"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">map_dbl</span>(mean, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The average bill length of Adelie pengiuns on Torgersen is 39 mm.</p>
+<p>The average bill length of Adelie penguins on Torgersen Island is 39 mm.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></li>
+<li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html">UBC MDS DSCI 521 milestone3</a></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

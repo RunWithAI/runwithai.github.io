@@ -1,7 +1,7 @@
 ---
 title: "Rython and R code integration"
 author: "RunWithAI"
-date: 2026-09-22
+date: 2026-09-24
 engine: knitr
 execute:
   message: false
@@ -10,9 +10,13 @@ format: html
 
 # Mix R and Python on web page
 
-This page was created following the guidelines from [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html) . The dataset is loaded via R library palmerpenguins. 
+This page was created following the guidelines from [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html) . 
 
-## R code
+## Dataset
+
+We use the [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset which is loaded via R library palmerpenguins and used by R and Python together.
+
+## Load penguins with R code
 
 First step, we use R to load the pengiuin data set and check what it has. 
 
@@ -24,14 +28,13 @@ knitr::opts_chunk$set(echo = TRUE)
 #| message: false
 
 library(reticulate)
-py_config()
+# py_config()
 library(tidyverse)
 library(palmerpenguins)
-
 head(penguins)
 ```
 
-## Python code
+## Access R Object using Python code
 
 Then we use Python to use the penguins object from R context and calculate the average bill length (mm) of Adelie pengiuns on Torgersen island. 
 
@@ -49,7 +52,7 @@ bill_length_mean
 ```
 
 
-## R code
+## Access Python object using R code
 
 Then we use R to access the object of 'bill_length_mean' defined in Python context and output its value.
 
@@ -59,6 +62,31 @@ round(py$bill_length_mean, 1)
 
 The average bill length of Adelie pengiuns on Torgersen is `{r} round(py$bill_length_mean, 1)` mm.
 
+
+## Using R code to draw a figure
+
+
+```{r}
+#| label: fig-bill-length-species
+#| fig-cap: "Distribution of bill length across penguin species."
+#| message: false
+#| warning: false
+#| 
+penguins |>
+  drop_na(bill_length_mm) |>
+  ggplot(aes(x = species, y = bill_length_mm, fill = species)) +
+  geom_boxplot(alpha = 0.6, width = 0.5, outlier.shape = NA) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 1.8) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 3.5, color = "darkred") +
+  labs(
+    x = "Species",
+    y = "Bill Length (mm)",
+    title = "Bill Length Distribution by Species",
+    subtitle = "Diamonds indicate the mean bill length for each species"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
 
 ## References
 

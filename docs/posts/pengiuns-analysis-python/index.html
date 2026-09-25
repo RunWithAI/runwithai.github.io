@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RunWithAI">
-<meta name="dcterms.date" content="2026-09-22">
+<meta name="dcterms.date" content="2026-09-24">
 
 <title>Python code integration – RunWithAI</title>
 <style>
@@ -158,8 +158,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-python-in-web-pages" id="toc-using-python-in-web-pages" class="nav-link active" data-scroll-target="#using-python-in-web-pages">Using Python in Web Pages</a>
+  <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python code</a></li>
+  <li><a href="#dataset-1" id="toc-dataset-1" class="nav-link" data-scroll-target="#dataset-1">Dataset</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -183,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 22, 2026</p>
+      <p class="date">September 24, 2026</p>
     </div>
   </div>
   
@@ -195,9 +206,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>We use the dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> to test how to embed python code and output into html page via Quarto.</p>
+<section id="using-python-in-web-pages" class="level1">
+<h1>Using Python in Web Pages</h1>
+<p>This page was created following the guidelines from <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html">UBC MDS DSCI 521 milestone3</a>.</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>We use the dataset from <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> to test how to embed python code and output into html page via Quarto. The dataset is loaded via python package palmerpenguins.</p>
+</section>
+<section id="python-code" class="level2">
+<h2 class="anchored" data-anchor-id="python-code">Python code</h2>
 <p>First step, we load the pengiuin data set and check what it has.</p>
-<div id="a7ea2865" class="cell" data-execution_count="1">
+<div id="fb022847" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
@@ -374,15 +393,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>calculate the average bill length (mm) of Adelie pengiuns on Torgersen island.</p>
-<div id="58ee7e99" class="cell" data-execution_count="2">
+<div id="320bdf54" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pats <span class="op">=</span> penguins.query(<span class="st">"species == 'Adelie' and island == 'Torgersen'"</span> )</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>bill_length_mean <span class="op">=</span> pats[<span class="st">'bill_length_mm'</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The average bill length of Adelie pengiuns on Torgersen is 39 mm.</p>
-<p><strong>Dataset Source:</strong></p>
-<p>palmerpenguins dataset(CC0 1.0) AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. https://allisonhorst.github.io/palmerpenguins/</p>
+</section>
+<section id="dataset-1" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-1">Dataset</h2>
+<p><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a> dataset(CC0 1.0) AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
