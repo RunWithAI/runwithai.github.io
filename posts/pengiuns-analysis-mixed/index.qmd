@@ -8,9 +8,13 @@ execute:
 format: html
 ---
 
-We use the dataset from  [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) to test how to embed python code and output into html page via Quarto.
+# Mix R and Python on web page
 
-First step, we load the pengiuin data set and check what it has. 
+This page was created following the guidelines from [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html) . The dataset is loaded via R library palmerpenguins. 
+
+## R code
+
+First step, we use R to load the pengiuin data set and check what it has. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,7 +31,9 @@ library(palmerpenguins)
 head(penguins)
 ```
 
-now let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island. 
+## Python code
+
+Then we use Python to use the penguins object from R context and calculate the average bill length (mm) of Adelie pengiuns on Torgersen island. 
 
 ```{python}
 from IPython.display import display
@@ -39,6 +45,22 @@ display(penguins.head())
 
 pats = penguins.query("species == 'Adelie' and island == 'Torgersen'" )
 bill_length_mean = pats['bill_length_mm'].mean()
+bill_length_mean
+```
+
+
+## R code
+
+Then we use R to access the object of 'bill_length_mean' defined in Python context and output its value.
+
+```r
+round(py$bill_length_mean, 1)
 ```
 
 The average bill length of Adelie pengiuns on Torgersen is `{r} round(py$bill_length_mean, 1)` mm.
+
+
+## References
+
+1. [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/)
+2. [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html)

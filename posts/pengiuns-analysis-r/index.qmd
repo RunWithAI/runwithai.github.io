@@ -1,16 +1,23 @@
 ---
 title: "R code integration"
 author: "RunWithAI"
-date: 2026-09-22
+date: 2026-09-24
 engine: knitr
 execute:
   message: false
 format: html
 ---
 
-We use the dataset from  [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) to test how to embed python code and output into html page via Quarto.
+# Using R in Web Pages
 
-First step, we load the pengiuin data set and check what it has. 
+This page was created following the guidelines from [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html) . The dataset is loaded via library palmerpenguins. 
+
+## Dataset
+
+We use the [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset to demonstrate how to embed R code and its output into an HTML page via Quarto.
+
+## R code
+First, we load the penguin dataset and inspect its contents.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -24,7 +31,7 @@ library(palmerpenguins)
 head(penguins)
 ```
 
-now let us find out the average bill length (mm) of Adelie pengiuns on Torgersen island. 
+Now, let's find the average bill length (mm) of Adelie penguins on Torgersen Island.
 
 ```{r}
 pgs <- penguins |> filter(species == 'Adelie' & island == 'Torgersen') |>
@@ -33,4 +40,10 @@ pgs <- penguins |> filter(species == 'Adelie' & island == 'Torgersen') |>
 
 ```
 
-The average bill length of Adelie pengiuns on Torgersen is `{r} round(pgs, 1)` mm.
+The average bill length of Adelie penguins on Torgersen Island is `{r} round(pgs, 1)` mm.
+
+
+## References
+
+1. [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/)
+2. [UBC MDS DSCI 521 milestone3](https://ubc-mds.github.io/DSCI_521_platforms-dsci/assignments/milestone3.html)

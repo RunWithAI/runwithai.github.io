@@ -4,5 +4,8 @@ author: "RunWithAI"
 date: 2026-09-09
 ---
 
-It was like a nightmare.  
-[Monday](monday.qmd)
+I spent an unforgettable first week at UBC. Facing math concepts that have grown rusty after nearly thirty years, trying to pick them back up is certainly no easy task.
+
+![UBC fall](../../images/ubc_fall.jpg "Beautiful UBC")
+
+Autumn has arrived, the leaves are already turning yellow, and the surroundings here are truly beautiful.
